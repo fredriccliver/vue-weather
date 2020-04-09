@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="typeof weather.main != undefined && weather.main.temp > 16 ? 'warm' : ''">
+  <div id="app" :class="isWarm() ? 'warm' : ''">
     <main>
       <div class="search-box">
         <input
@@ -47,7 +47,7 @@ export default {
           this.query +
           "&units=metric&APPID=" +
           this.api_key;
-        console.log(url);
+
         fetch(url)
           .then(res => {
             // debugger;
@@ -63,6 +63,16 @@ export default {
     },
     dateBuilder() {
       return moment().format("Do MMMM YYYY");
+    },
+    isWarm() {
+      // return true;
+      try {
+        if (this.weather.main.temp >= 16) {
+          return true;
+        }
+      } catch (error) {
+        return false;
+      }
     }
   }
 };
