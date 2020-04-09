@@ -1,24 +1,14 @@
 # vue-weather
 
-## Project setup
-```
-npm install
-```
+## References
+Youtube [Build a Weather App in VueJS | VueJS Beginner Tutorial](https://www.youtube.com/watch?v=JLc-hWsPTUY&list=FLXFjv6jFD_JmedNur46Skcg)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Notice
+I had reset my openweather API Key.
+You have to replace the key on your own.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+OpenWeathermap.org[link](https://openweathermap.org/)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Execution
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> npm run serve
